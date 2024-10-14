@@ -15,16 +15,13 @@ public class Categories {
     private By monitorsCategory = By.xpath("//a[text() = 'Monitors']");
     private By categorySection = By.id("tbodyid");
     private By sectionProducts = By.cssSelector(".card-block");
-    FluentWait fluentWait;
+    WebDriverWait wait;
 
 
 
     public Categories(WebDriver driver) {
         this.driver = driver;
-        this.fluentWait = new FluentWait(driver)
-                .withTimeout(Duration.ofSeconds(2))
-                .pollingEvery(Duration.ofSeconds(2))
-                .ignoring(NoSuchElementException.class);
+        this.wait = new WebDriverWait(driver,Duration.ofSeconds(5));
     }
 
     public void getListOfPhones() {
@@ -32,13 +29,14 @@ public class Categories {
     }
     public void getListOfLaptops()  {
         driver.findElement(laptopsCategory).click();
-        fluentWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".card-block")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".card-block")));
     }
 
     public void getListOfMonitors() {
         driver.findElement(monitorsCategory).click();
-        fluentWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".card-block")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".card-block")));
     }
+
 
     public List<WebElement> listCategorySectionProducts(){
         WebElement section = driver.findElement(categorySection);

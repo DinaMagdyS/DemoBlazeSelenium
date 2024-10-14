@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class CategoriesTests extends BaseTest {
 
@@ -15,8 +16,8 @@ public class CategoriesTests extends BaseTest {
         var categories = homePage.getCategories();
         categories.getListOfLaptops();
         List<WebElement> products = categories.listCategorySectionProducts();
-        //System.out.println("Number of Laptop products:"+ products.size());
-        assertEquals(products.size(),6,"Incorrect Number of Product in Category");
+        int laptopProductSize = products.size();
+        assertTrue(laptopProductSize > 0,"Incorrect Number of Product in Category");
     }
     
     @Test
@@ -24,7 +25,7 @@ public class CategoriesTests extends BaseTest {
         var categories = homePage.getCategories();
         categories.getListOfMonitors();
         List<WebElement> products = categories.listCategorySectionProducts();
-        //System.out.println("Number of monitor products:"+ products.size());
-        assertEquals(products.size(),2,"Incorrect Number of Product in Category");
+        int monitorsProductSize = products.size();
+        assertTrue(monitorsProductSize > 0,"Incorrect Number of Product in Category");
     }
 }

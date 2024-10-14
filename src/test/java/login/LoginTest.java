@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.LoginPage;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -22,11 +21,8 @@ public class LoginTest extends BaseTest {
         driver.findElement(By.id("login2")).click();
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginToDemoblaze("", "");
-
-        Alert alert = driver.switchTo().alert();
-        String alertMessage = alert.getText();
+        String alertMessage = handleAlert();
         Assert.assertEquals("Please fill out Username and Password.", alertMessage);
-
     }
 
     @Test

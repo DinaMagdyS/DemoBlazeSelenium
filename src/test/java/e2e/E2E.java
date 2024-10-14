@@ -17,11 +17,11 @@ import static org.testng.Assert.assertEquals;
 public class E2E extends BaseTest {
 
 
-    @Test
+    @Test(priority = 1)
     public void shouldBeAbleToSignUpWithNewUsernameAndPassword() {
         driver.findElement(By.id("signin2")).click();
         SignupPage signupPage = new SignupPage(driver);
-        signupPage.signup("newitiuser102024", "123456789"); // New username
+        signupPage.signup("newitiuser0762492024", "123456789"); // New username
         String expectedMessage = "Sign up successful.";
         String actualMessage = handleAlert();
         Assert.assertEquals(actualMessage, expectedMessage, "Expected alert message was not displayed.");
@@ -29,16 +29,16 @@ public class E2E extends BaseTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login2")));
         }
 
-    @Test(priority = 1)
+    @Test(priority = 2)
     protected void shouldBeAbleToLoginWithCorrectUsernameAndPassword() {
         driver.findElement(By.id("login2")).click();
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginToDemoblaze("newitiuser102024", "123456789");
+        loginPage.loginToDemoblaze("newitiuser092024", "123456789");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement navbarElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nameofuser")));
         Assert.assertTrue(navbarElement.getText().contains("Welcome"));
     }
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void addProductstoCart() {
         //add the first product
         var product1Page = homePage.clickSamsungGalaxyS6Product();
@@ -52,7 +52,7 @@ public class E2E extends BaseTest {
         product2Page.alert_clickToAccept();
     }
 
-    @Test(priority = 3)
+    @Test(priority = 4)
     public void testValidData_PlaceOrderModal() {
         var cartPage = homePage.clickCart();
         //Check the sum of products prices
@@ -62,7 +62,7 @@ public class E2E extends BaseTest {
 
         //Fill in Purchase Modal
         var purchaseForm = cartPage.clickPlaceOrder();
-        purchaseForm.fillPurchaseForm("dinamagdy", "Egypt", "Mansoura", "card", "10", "2024");
+        purchaseForm.fillPurchaseForm("sarahMohamed", "Egypt", "Mansoura", "card", "10", "2024");
         purchaseForm.clickPurchase();
         String message = purchaseForm.getPurchaseConfirmationMessage();
         purchaseForm.clickOK();
