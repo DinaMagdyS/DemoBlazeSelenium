@@ -60,6 +60,9 @@ https://github.com/user-attachments/assets/89ac0935-8be1-46d9-87ec-7612e477ff61
  ## Contributing 
  Contributions and collaboration are more than welcome and very much encouraged to make this project a valuable resource for the testing community.
 
+ ## Team collaboration
+ This project was a team effort by Dina Magdy and Sarah Mohammed as part of our graduation project.
+
  ## Contact
  For any queries or assistance, feel free to contact me via email at dinamagdyelmorsy@outlook.com
  
