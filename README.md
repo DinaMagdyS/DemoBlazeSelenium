@@ -57,11 +57,21 @@ https://github.com/user-attachments/assets/89ac0935-8be1-46d9-87ec-7612e477ff61
 
 
 
+## Testing and Reporting
+Reporting is an integral part of the framework, and I've implemented the TestNG report feature to generate comprehensive test reports. Specifically, I utilized listeners such as:
+
+Emailable Reporter: Generates a detailed email-friendly report that summarizes the test results.
+Failed Reporter: Creates a report focusing on failed tests, enabling easy tracking and debugging of issues.
+These reports facilitate a clear overview of test executions and failures, helping streamline test analysis and improve overall testing efficiency.
+
+![EmailableReportPassed](https://github.com/user-attachments/assets/eebe0159-4c0c-4578-b529-90153f36cd17)
+
+
  ## Contributing 
  Contributions and collaboration are more than welcome and very much encouraged to make this project a valuable resource for the testing community.
 
- ## Team collaboration
- This project was a team effort by Dina Magdy and Sarah Mohammed as part of our graduation project.
+ ## Team Collaboration
+ This project was a team effort by Dina Magdy and Sarah Mohammed as part of our graduation project from the Software Testing Track - Information Technology Institute (ITI).
 
  ## Contact
  For any queries or assistance, feel free to contact me via email at dinamagdyelmorsy@outlook.com
