@@ -14,7 +14,7 @@ public class SignupTest extends BaseTest {
         driver.findElement(By.id("signin2")).click();
 
         SignupPage signupPage = new SignupPage(driver);
-        signupPage.signup("newi53477489", "32205"); // New username
+        signupPage.signup("newiti23453477489", "32205"); // New username
 
         String expectedMessage = "Sign up successful.";
         String actualMessage = handleAlert();

@@ -1,2 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/SONY/Desktop/Proj V2/DemoblazeSelenium/src/test"><classes><class name="cart.CartTests"><methods><include name="testOneItemPlacedInCart"/><include name="testAllItemsPlacedInCart"/><include name="testDeleteItemFromCart"/><include name="testCorrectTotalPriceInCart"/><include name="testDeleteAllItemsFromCart"/></methods></class><class name="cart.PurchaseTests"><methods><include name="testValidData_PlaceOrderModal"/><include name="testEmptyFields_PlaceOrderModal"/><include name="testTotalPriceInForm"/></methods></class><class name="categories.CategoriesTests"><methods><include name="testLaptopsCategory"/><include name="testMonitorsCategory"/></methods></class><class name="contact.ContactTest"><methods><include name="contactAndSendMessage"/></methods></class><class name="e2e.E2E"><methods><include name="shouldBeAbleToSignUpWithNewUsernameAndPassword"/><include name="shouldBeAbleToLoginWithCorrectUsernameAndPassword"/><include name="addProductstoCart"/><include name="testValidData_PlaceOrderModal"/></methods></class><class name="login.LoginTest"><methods><include name="loginWithEmptyUsernameAndEmptyPassword"/><include name="loginWithCorrectUsernameAndEmptyPassword"/><include name="loginWithEmptyUsernameAndCorrectPassword"/><include name="shouldBeAbleToLoginWithCorrectUsernameAndPassword"/></methods></class><class name="navigation.NavigationTests"><methods><include name="testNavigator"/></methods></class><class name="signup.SignupTest"><methods><include name="shouldBeAbleToSignUpWithNonExistingUsernameAndPassword"/><include name="signupWithAnExistingUsername"/><include name="signupWithUsernameAndEmptyPassword"/><include name="signupWithEmptyUsernameAndPassword"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/SONY/Desktop/Proj V2/DemoblazeSelenium/src/test">
+        <classes>
+            <class name="cart.CartTests">
+                <methods>
+                    <include name="testOneItemPlacedInCart"/>
+                    <include name="testAllItemsPlacedInCart"/>
+                    <include name="testDeleteItemFromCart"/>
+                    <include name="testCorrectTotalPriceInCart"/>
+                    <include name="testDeleteAllItemsFromCart"/>
+                </methods>
+            </class>
+            <class name="cart.PurchaseTests">
+                <methods>
+                    <include name="testValidData_PlaceOrderModal"/>
+                    <include name="testEmptyFields_PlaceOrderModal"/>
+                    <include name="testTotalPriceInForm"/>
+                </methods>
+            </class>
+            <class name="categories.CategoriesTests">
+                <methods>
+                    <include name="testLaptopsCategory"/>
+                    <include name="testMonitorsCategory"/>
+                </methods>
+            </class>
+            <class name="contact.ContactTest">
+                <methods>
+                    <include name="contactAndSendMessage"/>
+                </methods>
+            </class>
+            <class name="e2e.E2E">
+                <methods>
+                    <include name="shouldBeAbleToSignUpWithNewUsernameAndPassword"/>
+                    <include name="shouldBeAbleToLoginWithCorrectUsernameAndPassword"/>
+                    <include name="addProductstoCart"/>
+                    <include name="testValidData_PlaceOrderModal"/>
+                </methods>
+            </class>
+            <class name="login.LoginTest">
+                <methods>
+                    <include name="loginWithEmptyUsernameAndEmptyPassword"/>
+                    <include name="loginWithCorrectUsernameAndEmptyPassword"/>
+                    <include name="loginWithEmptyUsernameAndCorrectPassword"/>
+                    <include name="shouldBeAbleToLoginWithCorrectUsernameAndPassword"/>
+                </methods>
+            </class>
+            <class name="navigation.NavigationTests">
+                <methods>
+                    <include name="testNavigator"/>
+                </methods>
+            </class>
+            <class name="signup.SignupTest">
+                <methods>
+                    <include name="shouldBeAbleToSignUpWithNonExistingUsernameAndPassword"/>
+                    <include name="signupWithAnExistingUsername"/>
+                    <include name="signupWithUsernameAndEmptyPassword"/>
+                    <include name="signupWithEmptyUsernameAndPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

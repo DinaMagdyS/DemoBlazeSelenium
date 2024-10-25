@@ -21,7 +21,7 @@ public class E2E extends BaseTest {
     public void shouldBeAbleToSignUpWithNewUsernameAndPassword() {
         driver.findElement(By.id("signin2")).click();
         SignupPage signupPage = new SignupPage(driver);
-        signupPage.signup("newitiuser0762492024", "123456789"); // New username
+        signupPage.signup("newitiuser76678124", "123456789"); // New username
         String expectedMessage = "Sign up successful.";
         String actualMessage = handleAlert();
         Assert.assertEquals(actualMessage, expectedMessage, "Expected alert message was not displayed.");
@@ -33,7 +33,7 @@ public class E2E extends BaseTest {
     protected void shouldBeAbleToLoginWithCorrectUsernameAndPassword() {
         driver.findElement(By.id("login2")).click();
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginToDemoblaze("newitiuser092024", "123456789");
+        loginPage.loginToDemoblaze("newitiuser76678124", "123456789");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement navbarElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nameofuser")));
         Assert.assertTrue(navbarElement.getText().contains("Welcome"));
@@ -62,7 +62,7 @@ public class E2E extends BaseTest {
 
         //Fill in Purchase Modal
         var purchaseForm = cartPage.clickPlaceOrder();
-        purchaseForm.fillPurchaseForm("sarahMohamed", "Egypt", "Mansoura", "card", "10", "2024");
+        purchaseForm.fillPurchaseForm("DinaMagdy", "Egypt", "Mansoura", "card", "10", "2024");
         purchaseForm.clickPurchase();
         String message = purchaseForm.getPurchaseConfirmationMessage();
         purchaseForm.clickOK();

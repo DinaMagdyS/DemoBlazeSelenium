@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="C:/Users/SONY/Desktop/Proj V2/DemoblazeSelenium/src/test(failed)">
+    <classes>
+      <class name="e2e.E2E">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="shouldBeAbleToSignUpWithNewUsernameAndPassword"/>
+          <include name="goHome"/>
+        </methods>
+      </class> <!-- e2e.E2E -->
+      <class name="signup.SignupTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="shouldBeAbleToSignUpWithNonExistingUsernameAndPassword"/>
+          <include name="goHome"/>
+        </methods>
+      </class> <!-- signup.SignupTest -->
+    </classes>
+  </test> <!-- C:/Users/SONY/Desktop/Proj V2/DemoblazeSelenium/src/test(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
