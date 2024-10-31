@@ -19,7 +19,7 @@ This project automates testing processes on the Demoblaze website using Selenium
 - Java
 - TestNG
 - Maven (for managing dependencies)
-- Extent Reports (for generating test reports)
+- Emailable Reports (for generating test reports)
 
  ## Prerequisites
 Before diving into the project, ensure you have the following prerequisites:
